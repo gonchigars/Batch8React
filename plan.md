@@ -1,5 +1,5 @@
 ```markdown
-### **JavaScript & React Tutorial using the Feynman Technique**
+
 
 ---
 
