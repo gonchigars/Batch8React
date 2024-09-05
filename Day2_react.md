@@ -116,10 +116,24 @@ footer {
 }
 
 ```
-2. Run the following command to start the development server:
-   ```
-   npm start
-   ```
-3. Your default web browser should automatically open and display your React app at `http://localhost:3000`.
+
+Great! You've successfully implemented the CSS changes I suggested. Let's break down what each part of the CSS is doing:
+
+1. `.App`:
+   - `display: flex` and `flex-direction: column` create a vertical flex container.
+   - `min-height: 100vh` ensures the container is at least as tall as the viewport.
+
+2. `header`:
+   - Styles the header with a dark background and white text.
+
+3. `main`:
+   - `flex: 1` allows it to grow and take up all available space between the header and footer.
+
+4. `footer`:
+   - Styled similarly to the header, but positioned at the bottom due to the flex layout.
+
+This layout creates a sticky footer effect, where the footer stays at the bottom even if the content is short, and it will be pushed down if the content is longer than the viewport height.
+
+Is there anything else you'd like to modify or add to your React app? For example, we could add some content to the main section or style the components further.
 
 You should now see your React app with the Header, Body, and Footer components rendered on the page.
