@@ -137,3 +137,117 @@ This layout creates a sticky footer effect, where the footer stays at the bottom
 Is there anything else you'd like to modify or add to your React app? For example, we could add some content to the main section or style the components further.
 
 You should now see your React app with the Header, Body, and Footer components rendered on the page.
+
+# React App Tutorial: Creating an App with Header, Sidebar, Body, and Footer Components
+
+[Steps 1-3 remain the same, with the addition of a new Sidebar component]
+
+## Step 3: Create the Sidebar component
+
+1. In the `src/components` folder, create a new file called `Sidebar.js`.
+2. Add the following code to `Sidebar.js`:
+
+```jsx
+import React from 'react';
+
+function Sidebar() {
+  return (
+    <aside className="sidebar">
+      <h2>Sidebar</h2>
+      <ul>
+        <li>Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3</li>
+      </ul>
+    </aside>
+  );
+}
+
+export default Sidebar;
+```
+
+## Step 4: Update App.js to include the Sidebar
+
+Modify `src/App.js` to include the new Sidebar component:
+
+```jsx
+import React from 'react';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import Body from './components/Body';
+import Footer from './components/Footer';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <Header />
+      <div className="content-wrapper">
+        <Sidebar />
+        <Body />
+      </div>
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
+```
+
+## Step 5: Update CSS to accommodate the Sidebar
+
+Replace the contents of `src/App.css` with the following:
+
+```css
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.content-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+footer {
+  background-color: #282c34;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+```
+
+This CSS does the following:
+- Keeps the overall layout with the header at the top and footer at the bottom.
+- Creates a `content-wrapper` that uses flexbox to position the sidebar and main content side by side.
+- Gives the sidebar a fixed width of 200px and a light gray background.
+- Allows the main content to grow and fill the remaining space.
+
+## Step 6: Run the program
+
+1. In your terminal, make sure you're in the project directory (`my-react-app`).
+2. If you're not already running the development server, start it with:
+   ```
+   npm start
+   ```
+3. Your default web browser should automatically open and display your React app at `http://localhost:3000`.
+
+You should now see your React app with the Header at the top, a Sidebar on the left, the main Body content next to it, and the Footer at the bottom of the page.
