@@ -88,6 +88,34 @@
 ## Step 4: Run the program
 
 1. In your terminal, make sure you're in the project directory (`my-react-app`).
+
+Change App.css and see what happens
+```
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+footer {
+  background-color: #282c34;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+```
 2. Run the following command to start the development server:
    ```
    npm start
